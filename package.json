@@ -1,0 +1,12 @@
+{
+  "name": "koa2test",
+  "dependencies": {
+    "koa": "^2.0.0",
+    "koa-bodyparser": "^3.2.0",
+    "koa-router": "^7.0.1",
+    "reflect-metadata": "^0.1.8",
+    "ts-loader": "^1.0.0",
+    "typescript": "^2.0.6",
+    "webpack": "^1.13.3"
+  }
+}
