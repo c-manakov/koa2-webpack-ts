@@ -1123,8 +1123,8 @@ declare module "repl" {
   }
 
   export function start(options: ReplOptions): REPLServer;
-
-  export type REPLCommand = (this: REPLServer, rest: string) => void;
+  
+  export type REPLCommand = (thi/*s*/ : REPLServer, rest: string) => void;
 
   export class REPLServer extends Interface {
     inputStream: NodeJS.ReadableStream;

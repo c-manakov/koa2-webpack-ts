@@ -1,6 +1,10 @@
 {
   "name": "koa2test",
   "dependencies": {
+    "babel": "^6.5.2",
+    "babel-core": "^6.18.2",
+    "babel-loader": "^6.2.7",
+    "json-loader": "^0.5.4",
     "koa": "^2.0.0",
     "koa-bodyparser": "^3.2.0",
     "koa-router": "^7.0.1",
@@ -8,5 +12,8 @@
     "ts-loader": "^1.0.0",
     "typescript": "^2.0.6",
     "webpack": "^1.13.3"
+  },
+  "devDependencies": {
+    "webpack-node-externals": "^1.5.4"
   }
 }

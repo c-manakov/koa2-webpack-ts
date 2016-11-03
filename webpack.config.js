@@ -1,11 +1,11 @@
-/**
- * Created by Monyk on 02.11.2016.
- */
 var path = require('path')
 var webpack = require('webpack')
+var node_externals = require('webpack-node-externals')
 
 module.exports = {
-    entry: './src/app.ts',
+    entry: './app.ts',
+    target: 'node',
+    externals: [node_externals()],
     output: {
         path: path.resolve(__dirname, './bin'),
         publicPath: '/bin/',
@@ -14,11 +14,8 @@ module.exports = {
     module: {
         loaders: [
             {test: /\.tsx?$/, loader: 'ts-loader',
-                exclude: /(node_modules|bower_components)/}
+                exclude: /(node_modules|bower_components)/},
+            {test: /\.json$/, loader: 'json'}
         ]
-    },
-    devServer: {
-        historyApiFallback: true,
-        noInfo: true
     }
 }
