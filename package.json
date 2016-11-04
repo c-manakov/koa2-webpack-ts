@@ -4,11 +4,13 @@
     "babel": "^6.5.2",
     "babel-core": "^6.18.2",
     "babel-loader": "^6.2.7",
+    "es6-shim": "^0.35.1",
     "json-loader": "^0.5.4",
     "koa": "^2.0.0",
     "koa-bodyparser": "^3.2.0",
     "koa-router": "^7.0.1",
     "reflect-metadata": "^0.1.8",
+    "routing-controllers": "^0.6.6",
     "ts-loader": "^1.0.0",
     "typescript": "^2.0.6",
     "webpack": "^1.13.3"

@@ -13,9 +13,15 @@ module.exports = {
     },
     module: {
         loaders: [
-            {test: /\.tsx?$/, loader: 'ts-loader',
-                exclude: /(node_modules|bower_components)/},
+            {
+                test: /\.tsx?$/, loader: 'ts-loader',
+                exclude: /(node_modules|bower_components)/
+            },
             {test: /\.json$/, loader: 'json'}
         ]
+    },
+    devtool: 'source-map',
+    resolve: {
+        extensions: ['', '.webpack.js', '.web.js', '.ts', '.js']
     }
 }
