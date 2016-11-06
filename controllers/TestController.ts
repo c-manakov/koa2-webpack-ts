@@ -2,33 +2,41 @@
  * Created by Monyk on 05.11.2016.
  */
 
-import {Controller, Param, Body, Get, Post, Put, Delete, JsonController} from "routing-controllers";
+import {Controller, Param, Body, Get, Post, Put, Delete, JsonController, Res} from "routing-controllers";
+import User from '../models/User'
+import {ServerResponse} from "http";
 
 @Controller()
-export class TestController {
+export class TestController
+{
 
-    @Get("/")
-    static getAll() {
-        return 'Hello Koa!'
+    @Get("/users")
+    async getAll(@Res() res : ServerResponse)
+    {
+        return JSON.stringify(await User.findAll())
     }
 
     @Get("/users/:id")
-    static getOne(@Param("id") id: number) {
+    getOne(@Param("id") id:number)
+    {
         return "This action returns user #" + id
     }
 
     @Post("/users")
-    static post(@Body() user: any) {
+    post(@Body() user:any)
+    {
         return "Saving user..."
     }
 
     @Put("/users/:id")
-    static put(@Param("id") id: number, @Body() user: any) {
+    put(@Param("id") id:number, @Body() user:any)
+    {
         return "Updating a user..."
     }
 
     @Delete("/users/:id")
-    static remove(@Param("id") id: number) {
+    remove(@Param("id") id:number)
+    {
         return "Removing user..."
     }
 
